@@ -1,0 +1,15 @@
+ModernClient Y<0 compatibility package
+
+Important:
+- The game core in this build already contains the `eagler:below_y0` client support.
+- No binary patch to classes.wasm/classes.js was needed for Y<0 support.
+- The previous MarkyHeightBridge 1.0 protocol (`marky:height`) is NOT compatible with this client.
+- This client expects the TuffX/TuffX+ Y0 protocol on `eagler:below_y0`.
+- This package keeps the previous VoidSent server-list replacement and the valid original assets.epk.
+
+Server-side requirements:
+- Paper/Spigot/Folia 1.18+ (Paper 1.21.11 is fine)
+- ViaVersion and ViaBackwards installed on the backend server
+- A server plugin implementing the TuffX+ `eagler:below_y0` protocol
+
+For the official matching implementation, use TuffX+ 1.1.1 or newer.

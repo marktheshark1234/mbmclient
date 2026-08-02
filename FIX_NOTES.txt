@@ -5,3 +5,5 @@ ModernClient fixed compatibility build
 - Removed all compatibility popups, help text, toast text, and charge HUD.
 - Retained only a silent V-key spear-use helper.
 - Original classes.wasm/classes.js are unchanged.
+
+Default CrackedPvP server entries replaced with VoidSent (wss://mc.voidsent.net).
