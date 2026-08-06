@@ -1,9 +1,2 @@
-ModernClient fixed compatibility build
-
-- Restored original assets.epk without repacking.
-- Removed locator/compass overlay entirely.
-- Removed all compatibility popups, help text, toast text, and charge HUD.
-- Retained only a silent V-key spear-use helper.
-- Original classes.wasm/classes.js are unchanged.
-
-Default CrackedPvP server entries replaced with VoidSent (wss://mc.voidsent.net).
+ModernClient Native Y0 JS 0.1.0
+See NATIVE_Y0_README.txt for implementation and setup details.
