@@ -1,2 +1,2 @@
-ModernClient Native Y0 JS 0.1.0
-See NATIVE_Y0_README.txt for implementation and setup details.
+ModernClient Native Y0 JS 0.1.1
+Fixes black lighting with bridge 1.0.4 and the crash after mining below Y=0.
