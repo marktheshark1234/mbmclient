@@ -5,20 +5,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="description" content="Eaglercraft 1.12 test directory HTML page">
 		<meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.12, 1.12.2">
-		<title>ModernClient Native Y0 0.1.1</title>
+		<title>ModernClient Native Y0 0.1.2</title>
 		<meta property="og:locale" content="en-US">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Eaglercraft 1.12.2">
 		<meta property="og:description" content="test directory HTML page">
 		<link type="image/png" rel="shortcut icon" href="favicon.png">
 		<script type="text/javascript" src="modernclient-spear-helper.js?v=compat-0.2.0"></script>
-		<script type="text/javascript" src="classes.js?v=modernclient-native-y0-0.1.1"></script>
+		<script type="text/javascript" src="classes-y0-0.1.2-loader.js?v=modernclient-native-y0-0.1.2"></script>
 		<script type="text/javascript">
 			"use strict";
 			window.addEventListener("load", function() {
 				if(window.location.href.indexOf("file:") === 0) {
 					alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
-				}else {
+					return;
+				}
+
+				if(!window.MCY0_CLASS_READY) {
+					alert("ModernClient Y0 patch loader did not start.");
+					return;
+				}
+
+				window.MCY0_CLASS_READY.then(function() {
 					var relayId = Math.floor(Math.random() * 3);
 					window.eaglercraftXOpts = {
 						demoMode: false,
@@ -30,7 +38,10 @@
 						crashOnUncaughtExceptions: true
 					};
 					main();
-				}
+				}).catch(function(ex) {
+					console.error(ex);
+					alert("ModernClient Y0 0.1.2 failed to load. Open the browser console for the exact patch error.");
+				});
 			});
 		</script>
 	</head>

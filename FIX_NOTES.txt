@@ -1,2 +1,10 @@
-ModernClient Native Y0 JS 0.1.1
-Fixes black lighting with bridge 1.0.4 and the crash after mining below Y=0.
+ModernClient Native Y0 0.1.2
+
+Root cause fixed:
+0.1.1 cached a generated TeaVM IBlockState object in a raw JavaScript Array.
+That object later entered rendering code as if it were a normal TeaVM-managed
+object/collection, causing AbstractCollection.isEmpty() to read an undefined
+internal field ("bl").
+
+0.1.2 converts the state with ModernClient's own GK_ encoder and stores only the
+numeric state ID in the Uint16Array. FmB then always decodes it with D4e.
