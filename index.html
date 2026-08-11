@@ -11,7 +11,7 @@
 		<meta property="og:title" content="Eaglercraft 1.12 WASM-GC" />
 		<meta property="og:description" content="test directory HTML page" />
 		<link type="image/png" rel="shortcut icon" href="favicon.png" />
-		<script type="text/javascript" src="modernclient-spear-helper.js?v=compat-0.2.0"></script>
+		<script type="text/javascript" src="modernclient-spear-helper.js?v=voidsent-y0-1.0.0"></script>
 		<script type="text/javascript">
 			"use strict";
 			window.addEventListener("load", async function() {
@@ -30,7 +30,7 @@
 					console.log("Downloading assets.epk...");
 					var assetsEPK;
 					try {
-						assetsEPK = new Uint8Array(await fetch("assets.epk?v=compat-0.2.0-fixed").then(resp => resp.arrayBuffer()));
+						assetsEPK = new Uint8Array(await fetch("assets.epk?v=voidsent-y0-1.0.0-fixed").then(resp => resp.arrayBuffer()));
 					}catch(ex) {
 						alert("Could not download assets.epk!");
 						console.error("Could not download assets.epk!");
@@ -59,16 +59,16 @@
 							return eaglercraftXOpts;
 						},
 						getEagRuntimeJSURL: function() {
-							return "eagruntime.js?v=2.0.3";
+							return "eagruntime.js?v=voidsent-y0-1.0.0";
 						},
 						getClassesWASMURL: function() {
-							return "classes.wasm?v=2.0.3";
+							return "classes.wasm?v=voidsent-y0-1.0.0";
 						},
 						getClassesDeobfWASMURL: function() {
-							return "classes.wasm-deobfuscator.wasm?v=2.0.3";
+							return "classes.wasm-deobfuscator.wasm?v=voidsent-y0-1.0.0";
 						},
 						getClassesTEADBGURL: function() {
-							return "classes.wasm.teadbg?v=2.0.3";
+							return "classes.wasm.teadbg?v=voidsent-y0-1.0.0";
 						},
 						getEPKFiles: function() {
 							return [{
@@ -111,7 +111,7 @@
 					
 					const scriptElement = document.createElement("script");
 					scriptElement.type = "text/javascript";
-					scriptElement.src = "eagruntime.js?v=2.0.3";
+					scriptElement.src = "eagruntime.js?v=voidsent-y0-1.0.0";
 					document.head.appendChild(scriptElement);
 				}
 			});

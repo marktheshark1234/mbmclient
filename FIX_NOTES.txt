@@ -1,9 +1,11 @@
-ModernClient fixed compatibility build
+ModernClient + VoidSentY0 1.0.0
+================================
 
-- Restored original assets.epk without repacking.
-- Removed locator/compass overlay entirely.
-- Removed all compatibility popups, help text, toast text, and charge HUD.
-- Retained only a silent V-key spear-use helper.
-- Original classes.wasm/classes.js are unchanged.
+- Preserved original classes.wasm and runtime binaries.
+- Confirmed the client core contains eagler:below_y0.
+- Removed the need for the incompatible marky:height bridge.
+- Cache-busted index.html runtime/wasm/helper URLs.
+- Matching server plugin: VoidSentY0-1.0.0.jar for Paper 1.21.11.
 
-Default CrackedPvP server entries replaced with VoidSent (wss://mc.voidsent.net).
+This build intentionally avoids binary-patching the renderer/game core because
+the required below-Y0 client protocol is already present there.

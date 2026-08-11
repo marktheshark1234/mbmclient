@@ -1,0 +1,18 @@
+VoidSentY0 client compatibility
+===============================
+
+This ModernClient game core ALREADY contains the eagler:below_y0 protocol.
+The classes.wasm file is intentionally unchanged.
+
+Server setup:
+1. Paper 1.21.11 + Java 21.
+2. Put VoidSentY0-1.0.0.jar in plugins/.
+3. Keep ViaVersion + ViaBackwards on the backend if your Eagler/1.12 stack uses them.
+4. Use only ONE below-Y0 provider. Remove old MarkyHeightBridge and do not run
+   VoidSentY0 at the same time as TuffX/TuffX+, because they use the same
+   eagler:below_y0 channel.
+5. Restart the server (do not /reload).
+6. Serve this client build and hard-refresh/clear browser cache once.
+
+The index.html query strings were changed only to force browsers/CDNs to fetch
+the matching client files instead of stale cached copies.
