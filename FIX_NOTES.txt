@@ -1,10 +1,9 @@
-ModernClient Native Y0 0.1.2
+ModernClient fixed compatibility build
 
-Root cause fixed:
-0.1.1 cached a generated TeaVM IBlockState object in a raw JavaScript Array.
-That object later entered rendering code as if it were a normal TeaVM-managed
-object/collection, causing AbstractCollection.isEmpty() to read an undefined
-internal field ("bl").
+- Restored original assets.epk without repacking.
+- Removed locator/compass overlay entirely.
+- Removed all compatibility popups, help text, toast text, and charge HUD.
+- Retained only a silent V-key spear-use helper.
+- Original classes.wasm/classes.js are unchanged.
 
-0.1.2 converts the state with ModernClient's own GK_ encoder and stores only the
-numeric state ID in the Uint16Array. FmB then always decodes it with D4e.
+Default CrackedPvP server entries replaced with VoidSent (wss://mc.voidsent.net).
